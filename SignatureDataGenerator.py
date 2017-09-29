@@ -56,7 +56,7 @@ class SignatureDataGenerator(object):
         lines = f.readlines()
         f.close()        
 
-        # small hack for stupid comment from ICDAR2017
+        
         # with open('/home/sounak/Dropbox/signature_verification/gpds_pairs_icdar_train.txt') as f:
         #     train_lines = f.read().splitlines()
 
@@ -72,12 +72,12 @@ class SignatureDataGenerator(object):
         
         # for train writers        
         self.train_lines = self.arrange_lines(train_lines, nsamples, size)
-        # self.train_lines = self.arrange_lines(train_lines, nsamples, 552)  # for icdar2017 comments
+        # self.train_lines = self.arrange_lines(train_lines, nsamples, 552) 
         # for valid writers        
         self.valid_lines = self.arrange_lines(valid_lines, nsamples, size)
         # for test writers        
         # self.test_lines = self.arrange_lines(test_lines, nsamples, size)
-        self.test_lines = self.arrange_lines(test_lines, nsamples, 552)  # for icdar2017 comments
+        self.test_lines = self.arrange_lines(test_lines, nsamples, 552)  
         
         # Set other parameters
         self.height=img_height
