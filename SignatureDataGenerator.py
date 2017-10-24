@@ -63,10 +63,7 @@ class SignatureDataGenerator(object):
 
         train_lines = [lines[i] for i in idx_train_lines]
         valid_lines = [lines[i] for i in idx_valid_lines]
-        # test_lines = [lines[i] for i in idx_test_lines]
-        # small hack for stupid comment from ICDAR2017
-        with open('/home/sounak/Dropbox/signature_verification/gpds_pairs_icdar_test.txt') as f:
-            test_lines = f.read().splitlines()
+        test_lines = [lines[i] for i in idx_test_lines]
 
         del lines
         
